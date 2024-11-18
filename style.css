@@ -1,0 +1,368 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    background-color: #8E022F;
+    color: #F7F1F0;
+    font-size: 18px;
+    text-align: justify;
+}
+
+header {
+    background-color: #F0426E;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-menu {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    margin-left: 20px;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+section {
+    padding: 20px;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #FF4E13;
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.concept {
+    text-align: center; 
+    margin-bottom: 40px; 
+    margin-top: 40px;
+}
+
+.concept-content {
+    display: flex;
+    align-items: stretch; 
+    gap: 30px; 
+    justify-content: flex-start; 
+}
+
+.concept p {
+    text-align: justify; 
+    text-align-last: justify;
+    flex: 1; 
+    margin: 0;
+    font-size: 18px; 
+    margin-left: 20px;
+    line-height: 1.4;
+    display: flex; 
+    flex-direction: column; 
+}
+
+.concept-image {
+    max-width: 50%; 
+    height: 100%; 
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.burgers .burger-cards {
+    display: flex;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    justify-items: center;
+    margin-bottom: 40px;
+}
+
+.burger-card {
+    background-color: #F0426E;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.burger-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.carousel-wrapper {
+    border-radius: 20px; 
+    overflow: hidden; 
+    position: relative;
+}
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 500px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 300%; 
+    height: 100%; 
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    border-radius: inherit; 
+    background-color: #8E022F;
+}
+
+
+input[type="radio"] {
+    display: none;
+}
+
+input#slide1:checked ~ .slides {
+    transform: translateX(0); 
+}
+
+input#slide2:checked ~ .slides {
+    transform: translateX(-100%); 
+}
+
+input#slide3:checked ~ .slides {
+    transform: translateX(-200%); 
+}
+
+.navigation {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.nav-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #F7F1F0;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nav-dot:hover {
+    background-color: #FF4E13;
+}
+.reviews-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.review-card {
+    background-color: #F0426E; 
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+    max-width: 400px; 
+}
+
+.review-name {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.review-stars {
+    color: gold;
+    font-size: 30px;
+}
+
+.review-text {
+    font-size: 16px;
+    text-align: justify;
+    text-align-last: justify;
+    margin-top: 10px;
+    color: #fff;
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    h2 {
+        margin-top: 20px; 
+    }
+
+    .concept-content {
+        flex-direction: column; 
+        text-align: justify;
+    }
+
+    .concept-image {
+        max-width: 80%; 
+    }
+
+    .concept p {
+        text-align: center; 
+    }
+
+    .burgers .burger-cards {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .burger-card {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .carousel-wrapper {
+        height: 300px; 
+    }
+
+    .carousel {
+        height: 100%; 
+    }
+
+    .slides {
+        width: 300%; 
+    }
+
+    .slide {
+        width: 100%; 
+    }
+
+    .slide img {
+        object-fit: contain; 
+        width: 100%; 
+        height: auto; 
+        border-radius: inherit; 
+    }
+
+    .navigation {
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+    }
+
+    .nav-dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .reviews-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .reviews {
+        padding-top: 40px; 
+    }
+
+    .reviews h2 {
+        margin-top: 40px;
+    }
+
+    .review-card {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .review-text {
+        text-align: justify; 
+        text-align-last: left; 
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: none; 
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .concept p {
+        font-size: 14px;
+        text-align: justify;
+        text-align-last: left;
+        align-items: center;
+    }
+
+    .concept-image {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .burger-card, .review-card, .restaurant-card {
+        width: 100%;
+    }
+
+    .carousel-wrapper {
+        height: 250px; 
+    }
+
+    .slide img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .reviews {
+        padding-top: 40px; 
+    }
+
+    .reviews h2 {
+        margin-top: 40px; 
+    }
+
+    .review-text {
+        text-align: justify; 
+        text-align-last: left; 
+    }
+}
